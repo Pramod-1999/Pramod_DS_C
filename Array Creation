@@ -1,0 +1,15 @@
+//Write a C program to Accept elements into Array.
+
+#include<stdio.h>
+int main()
+{
+    int a[100],i,n;
+    printf("Enter the number of elemnts in the Array : ");
+    scanf("%d",&n);
+    printf("\nEnter the elements %d of the Array : ",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("\nEntered elemets of the Array : ");
+    for(i=0;i<n;i++)
+        printf("\t%d",a[i]);
+}
