@@ -21,10 +21,18 @@ int main()
     
     while((a[mid]!=key) && beg<=end)
     {
-        if(key>a[mid])
+        //For Ascending Order
+        if(key>a[mid])   
             beg=mid+1;
         else
             end=mid-1;
+        mid=(beg+end)/2;
+
+        //For Descending Order
+        if(key<a[mid])
+            end=mid-1;
+        else
+            beg=mid+1;
         mid=(beg+end)/2;
     }
     if(a[mid]==key)
