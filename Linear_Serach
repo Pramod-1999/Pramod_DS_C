@@ -1,0 +1,30 @@
+//Write a C program to perform Linear Search.
+
+#include<stdio.h>
+int main()
+{
+    int a[100],i,n,key,pos=-1;
+    printf("Enter the number of elements in the Array : ");
+    scanf("%d",&n);
+    printf("\nEnter the %d elements of the Array : ",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("\nThe %d elements of the Array are : ",n);
+    for(i=0;i<n;i++)
+        printf("\t%d",a[i]);
+    printf("\nEnter the key element to Search : ");
+    scanf("%d",&key);
+    
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==key)
+        {
+            pos=i;
+            break;
+        }
+    }
+    if(pos==-1)
+        printf("\nThe Search is Unsuccessful.");
+    else
+        printf("\nThe Search is Successful, %d is found at positon %d.",key,pos+1);
+}
